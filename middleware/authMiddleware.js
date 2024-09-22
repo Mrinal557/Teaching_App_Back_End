@@ -26,7 +26,6 @@ const protectUser = async (req, res, next) =>
       console.log('User not found!');
       return res.status(401).json({ error: 'Not authorized, user not found' });
     }
-    console.log('User authenticated:', req.user.email);
     next();
   } catch (error)
   {
